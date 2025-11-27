@@ -208,11 +208,16 @@ tbody tr td button.eliminar {
 tbody tr td button.eliminar:hover {
     background: #da190b;
 }
+.tit{
+    position: relative;
+    top: -200px;
+    right: -330px;
+}
 
 #btnVolver {
     position: relative;
     top: 120px;
-    left: -300px;
+    left: -560px;
     display: block;
     margin: 0 auto;
     padding: 15px 40px;
