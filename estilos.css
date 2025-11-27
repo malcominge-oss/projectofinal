@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.titulo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#btnGuardar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#btnGuardar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+#btnLogin {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+#btnLogin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(245, 87, 108, 0.3);
+}
+
+#btnIrLista {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+#btnIrLista:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+br {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#tabla {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+thead tr th {
+    padding: 20px;
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+    transform: scale(1.01);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr td {
+    padding: 18px 20px;
+    color: #333;
+    font-size: 15px;
+}
+
+tbody tr td:first-child {
+    font-weight: 600;
+    color: #667eea;
+}
+
+/* Estilos para botones de acciones dentro de la tabla */
+tbody tr td button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+tbody tr td button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón editar */
+tbody tr td button.editar {
+    background: #4CAF50;
+    color: white;
+}
+
+tbody tr td button.editar:hover {
+    background: #45a049;
+}
+
+/* Botón eliminar */
+tbody tr td button.eliminar {
+    background: #f44336;
+    color: white;
+}
+
+tbody tr td button.eliminar:hover {
+    background: #da190b;
+}
+
+#btnVolver {
+    position: relative;
+    top: 120px;
+    left: -300px;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#btnVolver:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+#btnVolver:active {
+    transform: translateY(0);
+}
+
+br {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    #tabla {
+        font-size: 14px;
+    }
+
+    thead tr th,
+    tbody tr td {
+        padding: 12px 10px;
+    }
+
+    tbody tr td button {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Mensaje cuando no hay datos */
+tbody tr td[colspan] {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-style: italic;
+}
+

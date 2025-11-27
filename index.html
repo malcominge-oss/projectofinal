@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro y Login con IndexedDB</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div>
+         <div class="Contenedor"></div>
+    <p class="titulo center">Login</p>
+   
+        <input type="text" id="campo1" placeholder="Nombre:">
+        <br>
+        <input type="text" id="campo2" placeholder="Contraseña:">
+        <br>
+        <input type="text" id="campo3" placeholder="Correo:">
+        <br>
+    
+    <div>
+
+        <button id="btnGuardar">Crear cuenta</button>
+        <br>
+        <button id="btnLogin">Iniciar sesión</button>
+        <br>
+        <button id="btnIrLista">Ver usuarios</button>
+
+    </div>
+    </div>
+</div>
+  <script src="BD.js"></script>
+  <script>
+    document.getElementById("btnIrLista").addEventListener("click", () => {
+      window.location.href = "pag2.html";
+    });
+  </script>
+</body>
+</html>
