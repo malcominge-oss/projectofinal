@@ -24,7 +24,10 @@ body {
 }
 
 .center {
-    text-align: center;
+  text-align: center;
+  border: 1px solid;
+  height: 100%;
+  width: 800px;
 }
 
 input[type="text"] {
@@ -687,4 +690,8 @@ padding: 10px;
 .cont{
   background-color:rgb(72, 48, 139);
   border-radius: 40px;
+}
+.d{
+  position: relative;
+  top: -15px;
 }
