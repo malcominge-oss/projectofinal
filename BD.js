@@ -144,7 +144,7 @@ document.getElementById("btnLogin").addEventListener("click", async () => {
 
     if (acceso) {
       console.log("Acceso concedido.");
-      window.location.href = "./tercero.html";
+      window.location.href = "./primerapag.html";
     } else {
       alert("Datos incorrectos.");
     }

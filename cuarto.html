@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librerías y Toolkits Para el Desarrollo Móvil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .intro {
+            background: #f8f9ff;
+            padding: 30px;
+            border-bottom: 4px solid #667eea;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .intro-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .intro-item {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin: 30px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.4em;
+            margin: 25px 0 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .platform-section {
+            background: #f8f9ff;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+        }
+
+        .library-category {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .library-category:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .library-list {
+            margin: 15px 0;
+        }
+
+        .library-item {
+            background: #f8f9ff;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .library-name {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .library-description {
+            color: #555;
+        }
+
+        .arrow {
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .multiplatform-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .multiplatform-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .multiplatform-card .library-item {
+            background: rgba(255, 255, 255, 0.9);
+            border-left-color: #f5576c;
+        }
+
+        .language-badge {
+            display: inline-block;
+            background: #fff;
+            color: #f5576c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .functionality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .functionality-card {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .functionality-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+        }
+
+        .functionality-card h4 {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f8f9ff;
+        }
+
+        .functionality-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .functionality-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .functionality-card li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-box h2 {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            backdrop-filter: blur(10px);
+        }
+
+        .check-icon {
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        footer {
+            background: #f8f9ff;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 3px solid #667eea;
+        }
+
+        ul {
+            margin: 10px 0;
+            padding-left: 0;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 8px 0;
+        }
+
+        a {
+             background-color: #5a67d8;
+             color: white;
+             text-decoration: none;
+             font-size: 20px;
+             font-family: Arial, Helvetica, sans-serif;
+             border-radius: 20px;
+             margin: 50px; 
+             padding: 20px; 
+            }
+
+
+        @media (max-width: 768px) {
+            .intro-list {
+                grid-template-columns: 1fr;
+            }
+
+            .functionality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Librerías y Toolkits Para el Desarrollo Móvil</h1>
+        </header>
+
+        <div class="intro">
+            <p>Las librerías de funciones especializadas son paquetes de código que permiten añadir capacidades avanzadas a las aplicaciones móviles sin tener que programar todo desde cero. Estas librerías ayudan a:</p>
+            
+            <div class="intro-list">
+                <div class="intro-item">📍 Acceder a sensores</div>
+                <div class="intro-item">🌐 Manejar redes</div>
+                <div class="intro-item">🖼️ Procesar imágenes</div>
+                <div class="intro-item">🎵 Reproducir multimedia</div>
+                <div class="intro-item">🔐 Autenticación</div>
+                <div class="intro-item">🗺️ Mapas y geolocalización</div>
+                <div class="intro-item">💾 Bases de datos</div>
+                <div class="intro-item">🤖 Machine Learning</div>
+                <div class="intro-item">🔔 Notificaciones</div>
+                <div class="intro-item">✨ UI/UX avanzada</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- SECCIÓN 1: Android -->
+            <h2>1️⃣ Librerías Especializadas para Android</h2>
+
+            <div class="platform-section">
+                <h3><span class="check-icon">✔</span> A. Librerías oficiales de Android (Jetpack)</h3>
+                <p>Son las más importantes y usadas:</p>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">Room</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">base de datos local</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">LiveData / ViewModel</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">manejo de estado</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">WorkManager</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">tareas en segundo plano</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Navigation</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">navegación entre pantallas</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">CameraX</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">acceso avanzado a la cámara</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">ML Kit (Firebase)</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">machine learning listo para usar</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">DataStore</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">reemplazo moderno de SharedPreferences</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="library-category">
+                <h3><span class="check-icon">✔</span> B. Librerías de red</h3>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">Retrofit (square)</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">para APIs REST</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Volley (Google)</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">manejo de peticiones</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">OkHttp</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">cliente HTTP poderoso</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="library-category">
+                <h3><span class="check-icon">✔</span> C. Librerías multimedia</h3>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">ExoPlayer</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">reproductor de video/audio</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Glide / Picasso</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">carga de imágenes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="library-category">
+                <h3><span class="check-icon">✔</span> D. Librerías de sensores y hardware</h3>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">SensorManager API</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">nativa</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">OpenCV</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">visión por computadora</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">ARCore</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">realidad aumentada</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="library-category">
+                <h3><span class="check-icon">✔</span> E. Bases de datos locales</h3>
+                <div class="library-list">
+                    <div class="library-item"><span class="library-name">Realm</span></div>
+                    <div class="library-item"><span class="library-name">SQLite</span> <span class="library-description">(nativo)</span></div>
+                    <div class="library-item"><span class="library-name">ObjectBox</span></div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: iOS -->
+            <h2>2️⃣ Librerías Especializadas para iOS</h2>
+
+            <div class="platform-section">
+                <h3><span class="check-icon">✔</span> A. Frameworks nativos</h3>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">CoreLocation</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">GPS</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">CoreMotion</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">sensores de movimiento</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">AVFoundation</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">audio y video</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">CoreML</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">machine learning</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">ARKit</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">realidad aumentada</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">MapKit</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">mapas integrados</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">HealthKit</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">datos biométricos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="library-category">
+                <h3><span class="check-icon">✔</span> B. Librerías externas populares</h3>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">Alamofire</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">red y APIs</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Kingfisher</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">imágenes</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">SnapKit</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">autolayout programático</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">RealmSwift</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">base de datos móvil</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Firebase iOS SDK</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">analíticas, notificaciones, auth</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: Multiplataforma -->
+            <h2>3️⃣ Librerías para Desarrollo Multiplataforma</h2>
+
+            <div class="multiplatform-card">
+                <h3><span class="check-icon">✔</span> A. Flutter</h3>
+                <div class="language-badge">Usa el lenguaje Dart</div>
+                <p style="margin: 15px 0; color: white;"><strong>Toolkits principales:</strong></p>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">Material UI / Cupertino UI</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">componentes visuales</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Provider / Riverpod / Bloc</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">manejo de estado</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Dio</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">cliente HTTP</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Geolocator</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">GPS</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Flutter Camera</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">cámara</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Firebase + FlutterFire</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">servicios completos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="multiplatform-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                <h3><span class="check-icon">✔</span> B. React Native</h3>
+                <div class="language-badge" style="color: #00f2fe;">Usa JavaScript</div>
+                <p style="margin: 15px 0; color: white;"><strong>Librerías más importantes:</strong></p>
+                <div class="library-list">
+                    <div class="library-item">
+                        <span class="library-name">Axios / Fetch API</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">redes</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">React Navigation</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Redux / Zustand / MobX</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">estado</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">React Native Maps</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Vision Camera</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">Expo SDK</span>
+                        <span class="library-description">(si se usa Expo)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="multiplatform-card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                <h3><span class="check-icon">✔</span> C. Xamarin / .NET MAUI</h3>
+                <div class="language-badge" style="color: #fa709a;">Usa C#</div>
+                <div class="library-list" style="margin-top: 15px;">
+                    <div class="library-item">
+                        <span class="library-name">Essentials API</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">sensores</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">SQLite-net</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">base de datos</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">HTTPClient</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">redes</span>
+                    </div>
+                    <div class="library-item">
+                        <span class="library-name">MVVM Toolkit</span>
+                        <span class="arrow">→</span>
+                        <span class="library-description">arquitectura</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: Por funcionalidad -->
+            <h2>4️⃣ Librerías Especializadas por Funcionalidad</h2>
+            <p style="font-style: italic; color: #666; margin-bottom: 20px;">Esta es una lista útil para trabajos:</p>
+
+            <div class="functionality-grid">
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> A. Geolocalización y mapas</h4>
+                    <ul>
+                        <li>Google Maps SDK</li>
+                        <li>Mapbox</li>
+                        <li>OpenStreetMap SDK</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> B. Machine Learning</h4>
+                    <ul>
+                        <li>TensorFlow Lite</li>
+                        <li>ML Kit (Firebase)</li>
+                        <li>CoreML (iOS)</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> C. Notificaciones</h4>
+                    <ul>
+                        <li>Firebase Cloud Messaging (FCM)</li>
+                        <li>OneSignal</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> D. UI/UX Avanzada</h4>
+                    <ul>
+                        <li>Lottie → animaciones JSON</li>
+                        <li>Shimmer → efectos de carga</li>
+                        <li>Material Components</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> E. Realidad Aumentada</h4>
+                    <ul>
+                        <li>ARCore (Android)</li>
+                        <li>ARKit (iOS)</li>
+                        <li>Vuforia</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> F. Pagos y autenticación</h4>
+                    <ul>
+                        <li>Stripe SDK</li>
+                        <li>PayPal SDK</li>
+                        <li>Firebase Auth</li>
+                    </ul>
+                </div>
+
+                <div class="functionality-card">
+                    <h4><span class="check-icon">✔</span> G. Bases de datos y almacenamiento</h4>
+                    <ul>
+                        <li>SQLite</li>
+                        <li>Realm</li>
+                        <li>ObjectBox</li>
+                        <li>Firestore</li>
+                        <li>Supabase (multiplataforma)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RESUMEN -->
+            <div class="summary-box">
+                <h2>📌 Resumen</h2>
+                <p style="color: white; margin: 15px 0;">Las librerías especializadas para desarrollo móvil permiten añadir funciones avanzadas como:</p>
+                <div class="summary-grid">
+                    <div class="summary-item">📍 Acceso a sensores</div>
+                    <div class="summary-item">🌐 Redes y APIs</div>
+                    <div class="summary-item">💾 Bases de datos</div>
+                    <div class="summary-item">🤖 Machine learning</div>
+                    <div class="summary-item">✨ Interfaz avanzada</div>
+                    <div class="summary-item">🎵 Multimedia</div>
+                    <div class="summary-item">🥽 Realidad aumentada</div>
+                    <div class="summary-item">🔔 Notificaciones</div>
+                    <div class="summary-item">🔐 Autenticación</div>
+                    <div class="summary-item">☁️ Integraciones con nube</div>
+                    <br>
+                </div>
+            </div>
+                            <a href="primerapag.html"> Regresar </a>
+
+        </div>
+
+        <footer>
+            <p>Guía completa de librerías y toolkits para desarrollo móvil</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -3,17 +3,17 @@ const CACHE_NAME = "cache-app-v3";
 
 const FILES_TO_CACHE = [
   "index.html",
-  "indice.html",
-  "pag2.html",
+  "segundo.html",
+  "primerapag.html",
 
-  "fst.html",
-  "fst2.html",
-  "fst3.html",
-  "fst4.html",
-  "fst5.html",
-  "fst6.html",
-  "fst7.html",
+  "seg.html",
+  "ter.html",
+  "cuarto.html",
+  "quinto.html",
+  "sexto.html",
+  "septimo.html",
 
+  "leccion-en-linea.png",
   "wordpress-debug-1024x512.png",
   "google-play.png",
   "programing.png",
