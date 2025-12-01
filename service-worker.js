@@ -14,14 +14,11 @@ const FILES_TO_CACHE = [
   "septimo.html",
 
   "leccion-en-linea.png",
-  "wordpress-debug-1024x512.png",
-  "google-play.png",
-  "programing.png",
-  "sensores.jpeg",
 
   "qwer.js",
-  "style.css",
-  "style3.css"
+  "estilos.css",
+  "BD.js",
+  "service-worker.js",
 ];
 
 self.addEventListener("install", (event) => {
